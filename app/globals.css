@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@theme {
+  --color-fanclare-green: #2D5A27;
+  --color-fanclare-red: #8B1A1A;
+  --color-fanclare-tan: #F5F0E8;
+  --font-sans: var(--font-lato);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
