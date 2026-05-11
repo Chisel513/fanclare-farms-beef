@@ -1,10 +1,13 @@
 import Link from "next/link";
+import Image from "next/image";
 import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
 
 interface Product {
   name: string;
   description: string;
   slug: string;
+  src?: string;
+  alt?: string;
 }
 
 const products: Product[] = [
@@ -13,6 +16,8 @@ const products: Product[] = [
     description:
       "Our most versatile cut — perfect for burgers, chili, and everyday meals.",
     slug: "ground-beef",
+    src: "/images/FC_Ground_Beef 1.jpg",
+    alt: "Fanclare Farms grass-fed Black Angus ground beef",
   },
   {
     name: "Ribeye Steak",
@@ -25,6 +30,8 @@ const products: Product[] = [
     description:
       "Stock your freezer with a curated selection of our best cuts.",
     slug: "beef-share-quarter",
+    src: "/images/FC_Cows_On_Pasture 1.jpg",
+    alt: "Black Angus cattle on pasture at Fanclare Farms — order a beef share today",
   },
   {
     name: "Berkshire Pork",
@@ -56,9 +63,19 @@ export default function FeaturedProducts() {
               key={product.slug}
               className="bg-white rounded-2xl shadow-sm border border-stone-200 overflow-hidden flex flex-col"
             >
-              {/* Placeholder image area */}
-              <div className="aspect-square w-full">
-                <ImagePlaceholder />
+              {/* Image area */}
+              <div className="relative aspect-square w-full">
+                {product.src ? (
+                  <Image
+                    src={product.src}
+                    alt={product.alt ?? product.name}
+                    fill
+                    sizes="(max-width: 640px) 100vw, 50vw"
+                    className="object-cover"
+                  />
+                ) : (
+                  <ImagePlaceholder />
+                )}
               </div>
 
               {/* Card body */}

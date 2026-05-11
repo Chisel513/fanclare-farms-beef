@@ -27,79 +27,135 @@ interface GalleryItem {
 }
 
 const galleryItems: GalleryItem[] = [
+  // Farm & Cattle
   {
     id: 1,
     category: "Farm & Cattle",
-    label: "Cattle on Pasture",
-    src: "/images/cattle-herd.jpg",
-    alt: "Black Angus cattle herd grazing on open pasture at Fanclare Farms in Wakefield, Virginia",
+    label: "Cows on Pasture",
+    src: "/images/FC_Cows_On_Pasture 1.jpg",
+    alt: "Black Angus cows grazing on open pasture at Fanclare Farms in Wakefield, Virginia",
   },
   {
     id: 2,
     category: "Farm & Cattle",
-    label: "Morning at the Farm",
-    // Photo coming soon
+    label: "Grazing Herd",
+    src: "/images/FC_Cows_On_Pasture 2.jpg",
+    alt: "Black Angus cattle herd grazing at Fanclare Farms in Wakefield, Virginia",
   },
   {
     id: 3,
     category: "Farm & Cattle",
-    label: "The Herd",
-    src: "/images/black-angus.jpg",
-    alt: "Black Angus cattle close-up at Fanclare Farms — 5th generation family farm in Wakefield, Virginia",
+    label: "Open Pasture",
+    src: "/images/FC_Cows_On_Pasture 3.jpg",
+    alt: "Open pasture with Black Angus cattle at Fanclare Farms in Wakefield, Virginia",
   },
   {
     id: 4,
     category: "Farm & Cattle",
-    label: "Open Fields",
-    src: "/images/hay-field.jpg",
-    alt: "Hay field and open farmland at Fanclare Farms in Wakefield, Virginia",
+    label: "Black Angus Cattle",
+    src: "/images/FC_Cows_On_Pasture 4.jpg",
+    alt: "Black Angus cattle at Fanclare Farms — 5th generation family farm in Wakefield, Virginia",
   },
   {
     id: 5,
-    category: "Products & Cuts",
-    label: "Fresh Beef",
-    // Photo coming soon
+    category: "Farm & Cattle",
+    label: "Hay Field",
+    src: "/images/FC_Hay 1.jpg",
+    alt: "Hay field at Fanclare Farms in Wakefield, Virginia",
   },
   {
     id: 6,
+    category: "Farm & Cattle",
+    label: "Baling Season",
+    src: "/images/FC_Hay 2.jpg",
+    alt: "Hay baling season at Fanclare Farms in Wakefield, Virginia",
+  },
+  {
+    id: 7,
+    category: "Farm & Cattle",
+    label: "Open Fields",
+    src: "/images/FC_Hay 3.jpg",
+    alt: "Open farm fields at Fanclare Farms in Wakefield, Virginia",
+  },
+  {
+    id: 8,
+    category: "Farm & Cattle",
+    label: "The Herd",
+    src: "/images/cattle-herd.jpg",
+    alt: "Black Angus cattle herd at Fanclare Farms in Wakefield, Virginia",
+  },
+  // Products & Cuts
+  {
+    id: 9,
     category: "Products & Cuts",
     label: "Pork Cuts",
     src: "/images/pork-cuts.jpg",
     alt: "Pasture-raised Berkshire pork cuts from Fanclare Farms in Wakefield, Virginia",
   },
   {
-    id: 7,
-    category: "Products & Cuts",
-    label: "Vacuum-Packed Cuts",
-    // Photo coming soon
-  },
-  {
-    id: 8,
-    category: "Market Days",
-    label: "Suffolk Market",
-    src: "/images/beef-bus.jpg",
-    alt: "Fanclare Farms Beef Bus at the Suffolk Farmers Market in Hampton Roads, Virginia",
-  },
-  {
-    id: 9,
-    category: "Market Days",
-    label: "The Beef Bus",
-    // Photo coming soon
-  },
-  {
     id: 10,
-    category: "Market Days",
-    label: "Market Day",
+    category: "Products & Cuts",
+    label: "Fresh Beef",
     // Photo coming soon
   },
   {
     id: 11,
+    category: "Products & Cuts",
+    label: "Vacuum-Packed Cuts",
+    // Photo coming soon
+  },
+  // Market Days
+  {
+    id: 12,
+    category: "Market Days",
+    label: "Market Day",
+    src: "/images/FC_Market 1.jpg",
+    alt: "Fanclare Farms at a Hampton Roads farmers market",
+  },
+  {
+    id: 13,
+    category: "Market Days",
+    label: "Suffolk Market",
+    src: "/images/FC_Market 2.jpg",
+    alt: "Fanclare Farms Beef at the Suffolk Farmers Market in Hampton Roads, Virginia",
+  },
+  {
+    id: 14,
+    category: "Market Days",
+    label: "The Booth",
+    src: "/images/FC_Market 3.jpg",
+    alt: "Fanclare Farms market booth with fresh beef and pork cuts",
+  },
+  {
+    id: 15,
+    category: "Market Days",
+    label: "Fresh Cuts at Market",
+    src: "/images/FC_Market 4.jpg",
+    alt: "Fresh beef cuts available at the Fanclare Farms Beef market booth",
+  },
+  {
+    id: 16,
+    category: "Market Days",
+    label: "Community Market",
+    src: "/images/FC_Market 5.jpg",
+    alt: "Fanclare Farms Beef at a Hampton Roads community farmers market",
+  },
+  {
+    id: 17,
+    category: "Market Days",
+    label: "The Beef Bus",
+    src: "/images/beef-bus.jpg",
+    alt: "Fanclare Farms Beef Bus mobile market trailer at a Hampton Roads farmers market",
+  },
+  // Cooked & Plated
+  {
+    id: 18,
     category: "Cooked & Plated",
     label: "Grilled Ribeye",
     // Photo coming soon
   },
   {
-    id: 12,
+    id: 19,
     category: "Cooked & Plated",
     label: "Family Dinner",
     // Photo coming soon

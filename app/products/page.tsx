@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { Leaf, ShieldCheck, Package, Award } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import HeroSection from "@/components/sections/HeroSection";
@@ -22,6 +23,8 @@ export const metadata: Metadata = {
 interface ProductCard {
   name: string;
   description: string;
+  src?: string;
+  alt?: string;
 }
 
 // ── Quality Badges ────────────────────────────────────────────────────────────
@@ -64,43 +67,63 @@ const beefCuts: ProductCard[] = [
     name: "Ground Beef",
     description:
       "Our most versatile cut. Perfect for burgers, chili, meatballs, and everyday meals.",
+    src: "/images/FC_Ground_Beef 1.jpg",
+    alt: "Fanclare Farms grass-fed Black Angus ground beef",
   },
   {
     name: "Ribeye Steak",
     description:
       "Rich, well-marbled and full of flavor. Our most popular premium cut.",
+    src: "/images/FC_RibEye 1.jpg",
+    alt: "Fanclare Farms Black Angus ribeye steak — well-marbled and full of flavor",
   },
   {
-    name: "NY Strip",
+    name: "T-Bone Steak",
     description:
-      "Lean, tender, and packed with beefy flavor. A steakhouse classic.",
-  },
-  {
-    name: "Filet",
-    description:
-      "The most tender cut on the farm. Perfect for a special occasion.",
+      "The best of both worlds — NY strip on one side, tenderloin on the other.",
+    src: "/images/FC_Tbone 1.jpg",
+    alt: "Fanclare Farms Black Angus T-bone steak",
   },
   {
     name: "Brisket",
     description:
       "Slow-smoked or oven-roasted — fall-apart tender every time.",
+    src: "/images/FC_Beef_Brisket 1.jpg",
+    alt: "Fanclare Farms Black Angus beef brisket",
   },
   {
-    name: "Ribs",
+    name: "Beef Back Ribs",
     description: "Meaty, flavorful, and made for the grill.",
+    src: "/images/FC_Beef_Back_Ribs 1.jpg",
+    alt: "Fanclare Farms Black Angus beef back ribs",
   },
   {
-    name: "Roasts",
-    description: "Hearty and comforting. Perfect for Sunday dinner.",
-  },
-  {
-    name: "Stir Fry & Kabob Cuts",
-    description: "Quick cooking, maximum flavor.",
-  },
-  {
-    name: "Brats & Sausage",
+    name: "Kabob Cuts",
     description:
-      "Made fresh from our own beef. Great for cookouts.",
+      "Perfectly cubed and ready for the skewer. Great for grilling season.",
+    src: "/images/FC_Kebob 1.jpg",
+    alt: "Fanclare Farms Black Angus kabob cuts — cubed and ready to grill",
+  },
+  {
+    name: "Beef Patties",
+    description:
+      "Hand-formed from our own ground beef. Fire up the grill.",
+    src: "/images/FC_Beef_Patties 1.jpg",
+    alt: "Fanclare Farms hand-formed Black Angus beef burger patties",
+  },
+  {
+    name: "Beef Bacon",
+    description:
+      "A unique Fanclare specialty — all the smoky flavor of bacon, made from beef.",
+    src: "/images/FC_Beef_Bacon 1.jpg",
+    alt: "Fanclare Farms beef bacon — a unique farm specialty",
+  },
+  {
+    name: "Rendered Beef Fat",
+    description:
+      "Old-fashioned cooking fat rendered from our own cattle. Rich flavor for any dish.",
+    src: "/images/FC_Rendered_Beef_Fat 1.jpg",
+    alt: "Fanclare Farms rendered beef fat — traditional cooking fat from Black Angus cattle",
   },
 ];
 
@@ -123,8 +146,18 @@ function BeefCutsSection() {
               key={cut.name}
               className="bg-white rounded-2xl shadow-sm border border-stone-200 overflow-hidden flex flex-col"
             >
-              <div className="aspect-square w-full">
-                <ImagePlaceholder />
+              <div className="relative aspect-square w-full">
+                {cut.src ? (
+                  <Image
+                    src={cut.src}
+                    alt={cut.alt ?? cut.name}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover"
+                  />
+                ) : (
+                  <ImagePlaceholder />
+                )}
               </div>
               {/* Card body */}
               <div className="flex flex-col flex-1 p-5 gap-2">
@@ -214,16 +247,34 @@ function BeefSharesSection() {
 
 // ── Pork ──────────────────────────────────────────────────────────────────────
 
-const porkShares: ProductCard[] = [
+const porkCuts: ProductCard[] = [
   {
-    name: "1/2 Hog",
+    name: "Pork Chops",
     description:
-      "A great option for families who want a variety of pork cuts without taking a whole hog.",
+      "Thick-cut pasture-raised Berkshire pork chops. Tender and full of flavor.",
+    src: "/images/FC_Pork_Chops 1.jpg",
+    alt: "Fanclare Farms pasture-raised Berkshire pork chops",
   },
   {
-    name: "Whole Hog",
+    name: "Pork Spare Ribs",
     description:
-      "Maximum value and variety for pork lovers ready to stock the freezer.",
+      "Fall-off-the-bone Berkshire spare ribs. Perfect for low and slow.",
+    src: "/images/Fc_Pork_Spare_Ribs 1.jpg",
+    alt: "Fanclare Farms Berkshire pork spare ribs",
+  },
+  {
+    name: "Smoked Pork Side",
+    description:
+      "Slow-smoked heritage pork, sliced and ready for any meal.",
+    src: "/images/FC_Smoked_Pork_Side_Sliced 1.jpg",
+    alt: "Fanclare Farms smoked Berkshire pork side, sliced",
+  },
+  {
+    name: "Bulk Pork Sausage",
+    description:
+      "Mild bulk sausage made from our pasture-raised Berkshire pork.",
+    src: "/images/FC_Mild_Pork_Bulk_Sausage 1.jpg",
+    alt: "Fanclare Farms mild bulk pork sausage from Berkshire pork",
   },
 ];
 
@@ -240,24 +291,39 @@ function PorkSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-2xl mx-auto">
-          {porkShares.map((share) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {porkCuts.map((cut) => (
             <div
-              key={share.name}
-              className="bg-stone-50 rounded-2xl border border-stone-200 shadow-sm flex flex-col p-8 gap-3"
+              key={cut.name}
+              className="bg-white rounded-2xl shadow-sm border border-stone-200 overflow-hidden flex flex-col"
             >
-              <h3 className="text-xl font-bold text-fanclare-green">
-                {share.name}
-              </h3>
-              <p className="text-stone-500 text-sm leading-relaxed flex-1">
-                {share.description}
-              </p>
-              <Link
-                href="/contact"
-                className="mt-2 inline-flex items-center justify-center px-5 py-2 rounded-md bg-fanclare-green text-white text-sm font-semibold hover:opacity-90 transition-opacity w-full sm:w-auto sm:self-start"
-              >
-                Inquire Now
-              </Link>
+              <div className="relative aspect-square w-full">
+                {cut.src ? (
+                  <Image
+                    src={cut.src}
+                    alt={cut.alt ?? cut.name}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    className="object-cover"
+                  />
+                ) : (
+                  <ImagePlaceholder />
+                )}
+              </div>
+              <div className="flex flex-col flex-1 p-5 gap-2">
+                <h3 className="text-base font-bold text-fanclare-green">
+                  {cut.name}
+                </h3>
+                <p className="text-stone-500 text-sm leading-relaxed flex-1">
+                  {cut.description}
+                </p>
+                <Link
+                  href="/contact"
+                  className="mt-3 inline-flex items-center justify-center px-5 py-2 rounded-md bg-fanclare-green text-white text-sm font-semibold hover:opacity-90 transition-opacity w-full sm:w-auto sm:self-start"
+                >
+                  Contact Us to Order
+                </Link>
+              </div>
             </div>
           ))}
         </div>
