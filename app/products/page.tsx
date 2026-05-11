@@ -305,6 +305,7 @@ export default function ProductsPage() {
     <>
       <HeroSection
         backgroundImage="/images/hero-placeholder.jpg"
+        imageAlt="Premium vacuum-packed Black Angus beef cuts from Fanclare Farms Beef in Wakefield, Virginia"
         headline="Premium Cuts, Raised on Over 500 Acres"
         subheadline="Farm-direct beef and pork raised with care in Wakefield, Virginia."
       />

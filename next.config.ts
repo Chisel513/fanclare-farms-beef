@@ -1,7 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    remotePatterns: [
+      // When real product or farm photos are served from an external CDN,
+      // add the hostname here. Example:
+      // { protocol: "https", hostname: "images.example.com" },
+    ],
+  },
 };
 
 export default nextConfig;

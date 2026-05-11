@@ -186,6 +186,7 @@ export default function OurStoryPage() {
     <>
       <HeroSection
         backgroundImage="/images/hero-placeholder.jpg"
+        imageAlt="The Jones family farm in Wakefield, Virginia — five generations of farming land at Fanclare Farms"
         headline="Five Generations. One Farm. One Purpose."
         subheadline="Rooted in Wakefield, Virginia and raised for families who want to know where their food comes from."
       />

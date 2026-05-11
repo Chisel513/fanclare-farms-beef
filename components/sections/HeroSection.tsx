@@ -3,6 +3,7 @@ import Link from "next/link";
 
 interface HeroSectionProps {
   backgroundImage: string;
+  imageAlt?: string;
   headline: string;
   subheadline: string;
   ctaText?: string;
@@ -13,6 +14,7 @@ const isExternal = (url: string) => /^https?:\/\//.test(url);
 
 export default function HeroSection({
   backgroundImage,
+  imageAlt = "",
   headline,
   subheadline,
   ctaText,
@@ -28,7 +30,7 @@ export default function HeroSection({
       {/* Background image — bg-fanclare-green shows if the file is missing */}
       <Image
         src={backgroundImage}
-        alt=""
+        alt={imageAlt}
         fill
         priority
         sizes="100vw"

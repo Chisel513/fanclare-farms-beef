@@ -24,6 +24,7 @@ export default function HomePage() {
     <>
       <HeroSection
         backgroundImage="/images/hero-placeholder.jpg"
+        imageAlt="Black Angus cattle grazing on open pasture at Fanclare Farms in Wakefield, Virginia"
         headline="5th Generation Beef, Raised Right in Wakefield, VA"
         subheadline="Grass-fed, grain-finished Black Angus beef from our family farm to your table. Know Better. Eat Better."
         ctaText="Order Now"
