@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
 
 // ── Data ──────────────────────────────────────────────────────────────────────
 
@@ -21,8 +22,8 @@ interface GalleryItem {
   id: number;
   category: ItemCategory;
   label: string;
-  src: string;
-  alt: string;
+  src?: string;  // undefined → show ImagePlaceholder
+  alt?: string;
 }
 
 const galleryItems: GalleryItem[] = [
@@ -71,9 +72,8 @@ const galleryItems: GalleryItem[] = [
   {
     id: 7,
     category: "Products & Cuts",
-    label: "Black Angus Beef",
-    src: "/images/black-angus.jpg",
-    alt: "Fanclare Farms Black Angus cattle — USDA inspected and vacuum-packed for freshness",
+    label: "Vacuum-Packed Cuts",
+    // Photo coming soon
   },
   {
     id: 8,
@@ -86,15 +86,13 @@ const galleryItems: GalleryItem[] = [
     id: 9,
     category: "Market Days",
     label: "The Beef Bus",
-    src: "/images/beef-bus.jpg",
-    alt: "The Fanclare Farms Beef Bus mobile market trailer serving Hampton Roads communities",
+    // Photo coming soon
   },
   {
     id: 10,
     category: "Market Days",
     label: "Market Day",
-    src: "/images/beef-bus.jpg",
-    alt: "Fanclare Farms Beef at a Hampton Roads farmers market — fresh farm-direct beef and pork",
+    // Photo coming soon
   },
   {
     id: 11,
@@ -106,9 +104,8 @@ const galleryItems: GalleryItem[] = [
   {
     id: 12,
     category: "Cooked & Plated",
-    label: "Farm to Table",
-    src: "/images/cooked-steak.jpg",
-    alt: "Farm-to-table meal featuring Fanclare Farms Beef from Wakefield, Virginia",
+    label: "Family Dinner",
+    // Photo coming soon
   },
 ];
 
@@ -127,23 +124,35 @@ function GalleryCard({
       aria-label={`Open photo: ${item.label}`}
       className="group relative w-full aspect-square rounded-2xl overflow-hidden shadow-sm border border-stone-200 hover:shadow-md hover:border-fanclare-green/30 transition-all"
     >
-      <Image
-        src={item.src}
-        alt={item.alt}
-        fill
-        sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-        className="object-cover group-hover:scale-105 transition-transform duration-300"
-      />
-      {/* Label overlay on hover */}
-      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300 flex items-end">
-        <span className="translate-y-full group-hover:translate-y-0 transition-transform duration-300 w-full px-3 py-2 text-white text-xs font-semibold leading-snug">
-          {item.label}
-        </span>
-      </div>
-      {/* Category badge */}
-      <span className="absolute top-2 right-2 text-[10px] font-semibold uppercase tracking-wide bg-black/50 text-white px-2 py-0.5 rounded-full backdrop-blur-sm">
-        {item.category}
-      </span>
+      {item.src ? (
+        <>
+          <Image
+            src={item.src}
+            alt={item.alt ?? item.label}
+            fill
+            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+            className="object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+          {/* Label overlay on hover */}
+          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300 flex items-end">
+            <span className="translate-y-full group-hover:translate-y-0 transition-transform duration-300 w-full px-3 py-2 text-white text-xs font-semibold leading-snug">
+              {item.label}
+            </span>
+          </div>
+          {/* Category badge */}
+          <span className="absolute top-2 right-2 text-[10px] font-semibold uppercase tracking-wide bg-black/50 text-white px-2 py-0.5 rounded-full backdrop-blur-sm">
+            {item.category}
+          </span>
+        </>
+      ) : (
+        <>
+          <ImagePlaceholder />
+          {/* Category badge — green on tan background */}
+          <span className="absolute top-2 right-2 text-[10px] font-semibold uppercase tracking-wide bg-fanclare-green/15 text-fanclare-green px-2 py-0.5 rounded-full">
+            {item.category}
+          </span>
+        </>
+      )}
     </button>
   );
 }
@@ -177,16 +186,20 @@ function Lightbox({
         className="relative w-full max-w-2xl rounded-2xl overflow-hidden shadow-2xl bg-stone-900"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Image */}
+        {/* Image or placeholder */}
         <div className="relative aspect-square w-full">
-          <Image
-            src={item.src}
-            alt={item.alt}
-            fill
-            sizes="(max-width: 640px) 100vw, 672px"
-            className="object-contain"
-            priority
-          />
+          {item.src ? (
+            <Image
+              src={item.src}
+              alt={item.alt ?? item.label}
+              fill
+              sizes="(max-width: 640px) 100vw, 672px"
+              className="object-contain"
+              priority
+            />
+          ) : (
+            <ImagePlaceholder />
+          )}
         </div>
 
         {/* Caption bar */}
@@ -254,21 +267,17 @@ export default function GalleryClient() {
     [filtered.length]
   );
 
-  // Keyboard navigation
   useEffect(() => {
     if (openIndex === null) return;
-
     const handleKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") setOpenIndex(null);
       if (e.key === "ArrowLeft") navigate(-1);
       if (e.key === "ArrowRight") navigate(1);
     };
-
     document.addEventListener("keydown", handleKey);
     return () => document.removeEventListener("keydown", handleKey);
   }, [openIndex, navigate]);
 
-  // Lock body scroll when lightbox is open
   useEffect(() => {
     document.body.style.overflow = openIndex !== null ? "hidden" : "";
     return () => {

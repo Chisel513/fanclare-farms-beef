@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { Leaf, ShieldCheck, Package, Award } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import HeroSection from "@/components/sections/HeroSection";
+import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
 
 export const metadata: Metadata = {
   title: "Our Products",
@@ -22,8 +22,6 @@ export const metadata: Metadata = {
 interface ProductCard {
   name: string;
   description: string;
-  image: string;
-  imageAlt: string;
 }
 
 // ── Quality Badges ────────────────────────────────────────────────────────────
@@ -66,61 +64,43 @@ const beefCuts: ProductCard[] = [
     name: "Ground Beef",
     description:
       "Our most versatile cut. Perfect for burgers, chili, meatballs, and everyday meals.",
-    image: "/images/cooked-steak.jpg",
-    imageAlt: "Cooked Fanclare Farms Beef — grass-fed Black Angus ground beef",
   },
   {
     name: "Ribeye Steak",
     description:
       "Rich, well-marbled and full of flavor. Our most popular premium cut.",
-    image: "/images/cooked-steak.jpg",
-    imageAlt: "Cooked Fanclare Farms Beef ribeye steak — grass-fed, grain-finished Black Angus",
   },
   {
     name: "NY Strip",
     description:
       "Lean, tender, and packed with beefy flavor. A steakhouse classic.",
-    image: "/images/black-angus.jpg",
-    imageAlt: "Black Angus cattle at Fanclare Farms — source of our NY strip steaks",
   },
   {
     name: "Filet",
     description:
       "The most tender cut on the farm. Perfect for a special occasion.",
-    image: "/images/cooked-steak.jpg",
-    imageAlt: "Premium beef from Fanclare Farms Black Angus cattle in Wakefield, Virginia",
   },
   {
     name: "Brisket",
     description:
       "Slow-smoked or oven-roasted — fall-apart tender every time.",
-    image: "/images/cattle-herd.jpg",
-    imageAlt: "Fanclare Farms Black Angus cattle herd — source of our brisket cuts",
   },
   {
     name: "Ribs",
     description: "Meaty, flavorful, and made for the grill.",
-    image: "/images/black-angus.jpg",
-    imageAlt: "Black Angus cattle at Fanclare Farms Beef in Wakefield, Virginia",
   },
   {
     name: "Roasts",
     description: "Hearty and comforting. Perfect for Sunday dinner.",
-    image: "/images/cattle-herd.jpg",
-    imageAlt: "Fanclare Farms cattle grazing on 500+ acres in Wakefield, Virginia",
   },
   {
     name: "Stir Fry & Kabob Cuts",
     description: "Quick cooking, maximum flavor.",
-    image: "/images/cooked-steak.jpg",
-    imageAlt: "Fanclare Farms Beef Black Angus beef cuts — perfect for stir fry and kabobs",
   },
   {
     name: "Brats & Sausage",
     description:
       "Made fresh from our own beef. Great for cookouts.",
-    image: "/images/pork-cuts.jpg",
-    imageAlt: "Fanclare Farms fresh brats and sausage from pasture-raised Berkshire pork",
   },
 ];
 
@@ -143,14 +123,8 @@ function BeefCutsSection() {
               key={cut.name}
               className="bg-white rounded-2xl shadow-sm border border-stone-200 overflow-hidden flex flex-col"
             >
-              <div className="relative aspect-square w-full overflow-hidden">
-                <Image
-                  src={cut.image}
-                  alt={cut.imageAlt}
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-cover"
-                />
+              <div className="aspect-square w-full">
+                <ImagePlaceholder />
               </div>
               {/* Card body */}
               <div className="flex flex-col flex-1 p-5 gap-2">
@@ -182,27 +156,19 @@ const beefShares: ProductCard[] = [
     name: "1/8 Cow",
     description:
       "Perfect for a small household. A great way to try farm-direct beef.",
-    image: "/images/cattle-herd.jpg",
-    imageAlt: "Black Angus cattle at Fanclare Farms — available as beef shares",
   },
   {
     name: "1/4 Cow",
     description:
       "Our most popular share. Plenty of variety for a family of four.",
-    image: "/images/cattle-herd.jpg",
-    imageAlt: "Black Angus cattle at Fanclare Farms — available as beef shares",
   },
   {
     name: "1/2 Cow",
     description: "Serious savings for serious beef lovers.",
-    image: "/images/cattle-herd.jpg",
-    imageAlt: "Black Angus cattle at Fanclare Farms — available as beef shares",
   },
   {
     name: "Whole Cow",
     description: "Maximum variety and value. Fill that freezer up.",
-    image: "/images/cattle-herd.jpg",
-    imageAlt: "Black Angus cattle at Fanclare Farms — available as beef shares",
   },
 ];
 
@@ -253,15 +219,11 @@ const porkShares: ProductCard[] = [
     name: "1/2 Hog",
     description:
       "A great option for families who want a variety of pork cuts without taking a whole hog.",
-    image: "/images/pork-cuts.jpg",
-    imageAlt: "Pasture-raised Berkshire pork cuts from Fanclare Farms",
   },
   {
     name: "Whole Hog",
     description:
       "Maximum value and variety for pork lovers ready to stock the freezer.",
-    image: "/images/pork-cuts.jpg",
-    imageAlt: "Pasture-raised Berkshire pork cuts from Fanclare Farms",
   },
 ];
 

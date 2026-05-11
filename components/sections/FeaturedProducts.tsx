@@ -1,12 +1,10 @@
-import Image from "next/image";
 import Link from "next/link";
+import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
 
 interface Product {
   name: string;
   description: string;
   slug: string;
-  image: string;
-  imageAlt: string;
 }
 
 const products: Product[] = [
@@ -15,32 +13,24 @@ const products: Product[] = [
     description:
       "Our most versatile cut — perfect for burgers, chili, and everyday meals.",
     slug: "ground-beef",
-    image: "/images/cattle-herd.jpg",
-    imageAlt: "Black Angus cattle herd at Fanclare Farms — the source of our grass-fed ground beef",
   },
   {
     name: "Ribeye Steak",
     description:
       "Rich, well-marbled, and full of flavor. Our most popular premium cut.",
     slug: "ribeye-steak",
-    image: "/images/cooked-steak.jpg",
-    imageAlt: "Cooked Fanclare Farms Beef ribeye steak — grass-fed, grain-finished Black Angus",
   },
   {
     name: "Beef Share (1/4 Cow)",
     description:
       "Stock your freezer with a curated selection of our best cuts.",
     slug: "beef-share-quarter",
-    image: "/images/black-angus.jpg",
-    imageAlt: "Black Angus cattle at Fanclare Farms in Wakefield, Virginia — available as beef shares",
   },
   {
     name: "Berkshire Pork",
     description:
       "Pasture-raised heritage pork with exceptional flavor and tenderness.",
     slug: "berkshire-pork",
-    image: "/images/pork-cuts.jpg",
-    imageAlt: "Pasture-raised Berkshire pork cuts from Fanclare Farms in Wakefield, Virginia",
   },
 ];
 
@@ -66,15 +56,9 @@ export default function FeaturedProducts() {
               key={product.slug}
               className="bg-white rounded-2xl shadow-sm border border-stone-200 overflow-hidden flex flex-col"
             >
-              {/* Product image */}
-              <div className="relative aspect-square w-full overflow-hidden">
-                <Image
-                  src={product.image}
-                  alt={product.imageAlt}
-                  fill
-                  sizes="(max-width: 640px) 100vw, 50vw"
-                  className="object-cover"
-                />
+              {/* Placeholder image area */}
+              <div className="aspect-square w-full">
+                <ImagePlaceholder />
               </div>
 
               {/* Card body */}
