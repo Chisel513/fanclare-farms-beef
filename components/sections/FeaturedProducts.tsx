@@ -24,6 +24,8 @@ const products: Product[] = [
     description:
       "Rich, well-marbled, and full of flavor. Our most popular premium cut.",
     slug: "ribeye-steak",
+    src: "/images/FC_RibEye 1.jpg",
+    alt: "Fanclare Farms Black Angus ribeye steak",
   },
   {
     name: "Beef Share (1/4 Cow)",
@@ -38,6 +40,8 @@ const products: Product[] = [
     description:
       "Pasture-raised heritage pork with exceptional flavor and tenderness.",
     slug: "berkshire-pork",
+    src: "/images/pork-cuts.jpg",
+    alt: "Pasture-raised Berkshire pork cuts from Fanclare Farms",
   },
 ];
 
