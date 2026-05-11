@@ -38,8 +38,7 @@ const galleryItems: GalleryItem[] = [
     id: 2,
     category: "Farm & Cattle",
     label: "Morning at the Farm",
-    src: "/images/farm-pond.jpg",
-    alt: "Morning view of the pond and farmland at Fanclare Farms in Wakefield, Virginia",
+    // Photo coming soon
   },
   {
     id: 3,
@@ -59,8 +58,7 @@ const galleryItems: GalleryItem[] = [
     id: 5,
     category: "Products & Cuts",
     label: "Fresh Beef",
-    src: "/images/cooked-steak.jpg",
-    alt: "Fanclare Farms Beef grass-fed Black Angus beef — fresh and ready to cook",
+    // Photo coming soon
   },
   {
     id: 6,
@@ -98,8 +96,7 @@ const galleryItems: GalleryItem[] = [
     id: 11,
     category: "Cooked & Plated",
     label: "Grilled Ribeye",
-    src: "/images/cooked-steak.jpg",
-    alt: "Grilled ribeye steak from Fanclare Farms Beef grass-fed Black Angus cattle",
+    // Photo coming soon
   },
   {
     id: 12,
