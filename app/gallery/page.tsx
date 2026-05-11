@@ -42,7 +42,7 @@ function SocialLink() {
             href="https://www.facebook.com/fanclarebeef/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-8 py-3 rounded-md bg-fanclare-green text-white font-semibold text-base hover:opacity-90 transition-opacity"
+            className="inline-flex items-center justify-center px-8 py-3 rounded-md bg-fanclare-green text-white font-semibold text-base hover:opacity-90 transition-opacity w-full sm:w-auto"
           >
             Follow on Facebook
           </a>
@@ -50,7 +50,7 @@ function SocialLink() {
             href="https://www.instagram.com/fanclare_farms_beef/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-8 py-3 rounded-md border-2 border-fanclare-green text-fanclare-green font-semibold text-base hover:bg-fanclare-green hover:text-white transition-colors"
+            className="inline-flex items-center justify-center px-8 py-3 rounded-md border-2 border-fanclare-green text-fanclare-green font-semibold text-base hover:bg-fanclare-green hover:text-white transition-colors w-full sm:w-auto"
           >
             Follow on Instagram
           </a>

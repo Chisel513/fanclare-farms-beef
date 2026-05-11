@@ -48,10 +48,10 @@ function StepProcess() {
 
         {/* Steps grid with connecting line on desktop */}
         <div className="relative">
-          {/* Connector line — desktop only, runs through center of step circles */}
-          <div className="hidden sm:block absolute top-6 left-[12.5%] right-[12.5%] h-px bg-fanclare-green/20" />
+          {/* Connector line — large screens only, runs through center of step circles */}
+          <div className="hidden lg:block absolute top-6 left-[12.5%] right-[12.5%] h-px bg-fanclare-green/20" />
 
-          <div className="grid grid-cols-1 sm:grid-cols-4 gap-10 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-8 lg:gap-6">
             {steps.map((step) => (
               <div
                 key={step.number}
@@ -170,13 +170,13 @@ function ContactCta() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="tel:+17577978198"
-            className="inline-flex items-center justify-center px-8 py-3 rounded-md bg-white text-fanclare-green font-bold text-base hover:opacity-90 transition-opacity"
+            className="inline-flex items-center justify-center px-8 py-3 rounded-md bg-white text-fanclare-green font-bold text-base hover:opacity-90 transition-opacity w-full sm:w-auto"
           >
             Call (757) 797-8198
           </a>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center px-8 py-3 rounded-md border-2 border-white text-white font-semibold text-base hover:bg-white hover:text-fanclare-green transition-colors"
+            className="inline-flex items-center justify-center px-8 py-3 rounded-md border-2 border-white text-white font-semibold text-base hover:bg-white hover:text-fanclare-green transition-colors w-full sm:w-auto"
           >
             Send a Message
           </Link>

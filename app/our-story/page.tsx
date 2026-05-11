@@ -17,7 +17,7 @@ function HeritageSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
           {/* Image placeholder */}
           <div className="w-full aspect-[4/3] rounded-2xl bg-fanclare-tan border border-fanclare-green/15 flex items-center justify-center">
-            <span className="text-fanclare-green/20 text-4xl font-black select-none tracking-tight">
+            <span className="text-fanclare-green/20 text-lg sm:text-2xl font-black select-none tracking-tight">
               FARM PHOTO
             </span>
           </div>
@@ -123,7 +123,7 @@ function BeefBusFeature() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
           {/* Image placeholder */}
           <div className="w-full aspect-[4/3] rounded-2xl bg-fanclare-tan border border-fanclare-green/15 flex items-center justify-center">
-            <span className="text-fanclare-green/20 text-4xl font-black select-none tracking-tight">
+            <span className="text-fanclare-green/20 text-lg sm:text-2xl font-black select-none tracking-tight">
               BEEF BUS PHOTO
             </span>
           </div>
@@ -157,13 +157,13 @@ function CtaSection() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center px-8 py-3 rounded-md bg-fanclare-green text-white font-semibold text-base hover:opacity-90 transition-opacity"
+            className="inline-flex items-center justify-center px-8 py-3 rounded-md bg-fanclare-green text-white font-semibold text-base hover:opacity-90 transition-opacity w-full sm:w-auto"
           >
             Order Now
           </Link>
           <Link
             href="/products"
-            className="inline-flex items-center justify-center px-8 py-3 rounded-md border-2 border-fanclare-green text-fanclare-green font-semibold text-base hover:bg-fanclare-green hover:text-white transition-colors"
+            className="inline-flex items-center justify-center px-8 py-3 rounded-md border-2 border-fanclare-green text-fanclare-green font-semibold text-base hover:bg-fanclare-green hover:text-white transition-colors w-full sm:w-auto"
           >
             See Our Products
           </Link>

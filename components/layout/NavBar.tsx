@@ -5,11 +5,11 @@ import { useState } from "react";
 
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Beef Shares", href: "/beef-shares" },
+  { label: "Our Story", href: "/our-story" },
   { label: "Products", href: "/products" },
   { label: "How It Works", href: "/how-to-order" },
-  { label: "FAQ", href: "/faq" },
+  { label: "Find Us", href: "/find-us" },
+  { label: "Gallery", href: "/gallery" },
   { label: "Contact", href: "/contact" },
 ];
 

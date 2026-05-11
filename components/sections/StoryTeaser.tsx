@@ -8,7 +8,7 @@ export default function StoryTeaser() {
 
           {/* Image placeholder */}
           <div className="w-full aspect-[4/3] rounded-2xl bg-fanclare-green/10 border border-fanclare-green/15 flex items-center justify-center">
-            <span className="text-fanclare-green/25 text-5xl font-black select-none tracking-tight">
+            <span className="text-fanclare-green/25 text-xl sm:text-3xl font-black select-none tracking-tight">
               FARM PHOTO
             </span>
           </div>

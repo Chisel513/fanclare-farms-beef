@@ -72,7 +72,7 @@ export default function FeaturedProducts() {
                 </p>
                 <Link
                   href="/contact"
-                  className="mt-2 inline-flex items-center justify-center px-5 py-2.5 rounded-md bg-fanclare-green text-white text-sm font-semibold hover:opacity-90 transition-opacity self-start"
+                  className="mt-2 inline-flex items-center justify-center px-5 py-2.5 rounded-md bg-fanclare-green text-white text-sm font-semibold hover:opacity-90 transition-opacity w-full sm:w-auto sm:self-start"
                 >
                   Contact Us to Order
                 </Link>

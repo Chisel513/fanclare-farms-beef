@@ -178,7 +178,7 @@ export default function ContactForm() {
 
       <button
         type="submit"
-        className="inline-flex items-center justify-center px-8 py-3 rounded-md bg-fanclare-green text-white font-semibold text-base hover:opacity-90 transition-opacity self-start"
+        className="inline-flex items-center justify-center px-8 py-3 rounded-md bg-fanclare-green text-white font-semibold text-base hover:opacity-90 transition-opacity w-full sm:w-auto sm:self-start"
       >
         Send Message
       </button>

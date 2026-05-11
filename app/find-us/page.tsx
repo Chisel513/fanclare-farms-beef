@@ -196,7 +196,7 @@ function FarmEventsNote() {
             href="https://www.facebook.com/fanclarebeef/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-7 py-3 rounded-md bg-fanclare-green text-white font-semibold text-sm hover:opacity-90 transition-opacity"
+            className="inline-flex items-center justify-center px-7 py-3 rounded-md bg-fanclare-green text-white font-semibold text-sm hover:opacity-90 transition-opacity w-full sm:w-auto"
           >
             Facebook
           </a>
@@ -204,7 +204,7 @@ function FarmEventsNote() {
             href="https://www.instagram.com/fanclare_farms_beef/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-7 py-3 rounded-md border-2 border-fanclare-green text-fanclare-green font-semibold text-sm hover:bg-fanclare-green hover:text-white transition-colors"
+            className="inline-flex items-center justify-center px-7 py-3 rounded-md border-2 border-fanclare-green text-fanclare-green font-semibold text-sm hover:bg-fanclare-green hover:text-white transition-colors w-full sm:w-auto"
           >
             Instagram
           </a>

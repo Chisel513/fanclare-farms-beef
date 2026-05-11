@@ -110,7 +110,7 @@ function BeefCutsSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {beefCuts.map((cut) => (
             <div
               key={cut.name}
@@ -132,7 +132,7 @@ function BeefCutsSection() {
                 </p>
                 <Link
                   href="/contact"
-                  className="mt-3 inline-flex items-center justify-center px-5 py-2 rounded-md bg-fanclare-green text-white text-sm font-semibold hover:opacity-90 transition-opacity self-start"
+                  className="mt-3 inline-flex items-center justify-center px-5 py-2 rounded-md bg-fanclare-green text-white text-sm font-semibold hover:opacity-90 transition-opacity w-full sm:w-auto sm:self-start"
                 >
                   Contact Us to Order
                 </Link>
@@ -250,7 +250,7 @@ function PorkSection() {
               </p>
               <Link
                 href="/contact"
-                className="mt-2 inline-flex items-center justify-center px-5 py-2 rounded-md bg-fanclare-green text-white text-sm font-semibold hover:opacity-90 transition-opacity self-start"
+                className="mt-2 inline-flex items-center justify-center px-5 py-2 rounded-md bg-fanclare-green text-white text-sm font-semibold hover:opacity-90 transition-opacity w-full sm:w-auto sm:self-start"
               >
                 Inquire Now
               </Link>
