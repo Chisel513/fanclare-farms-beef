@@ -8,7 +8,7 @@ const navLinks = [
   { label: "About", href: "/about" },
   { label: "Beef Shares", href: "/beef-shares" },
   { label: "Products", href: "/products" },
-  { label: "How It Works", href: "/how-it-works" },
+  { label: "How It Works", href: "/how-to-order" },
   { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
 ];
@@ -44,10 +44,10 @@ export default function NavBar() {
         {/* Shop CTA + hamburger */}
         <div className="flex items-center gap-4">
           <Link
-            href="/products"
+            href="/contact"
             className="hidden sm:inline-flex items-center px-4 py-2 rounded-md bg-fanclare-red text-white text-sm font-semibold hover:bg-opacity-90 transition-colors"
           >
-            Shop Now
+            Order Now
           </Link>
 
           {/* Hamburger button */}
@@ -101,11 +101,11 @@ export default function NavBar() {
             ))}
             <li className="pt-2">
               <Link
-                href="/products"
+                href="/contact"
                 onClick={() => setMenuOpen(false)}
                 className="block py-2 px-3 rounded-md bg-fanclare-red text-white text-sm font-semibold text-center hover:bg-opacity-90 transition-colors"
               >
-                Shop Now
+                Order Now
               </Link>
             </li>
           </ul>

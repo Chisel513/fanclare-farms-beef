@@ -11,10 +11,10 @@ export default function HomePage() {
     <>
       <HeroSection
         backgroundImage="/images/hero-placeholder.jpg"
-        headline="Premium Farm-Raised Beef"
-        subheadline="From our family farm to your table."
-        ctaText="Shop Beef"
-        ctaLink="/products"
+        headline="5th Generation Beef, Raised Right in Wakefield, VA"
+        subheadline="Grass-fed, grain-finished Black Angus beef from our family farm to your table. Know Better. Eat Better."
+        ctaText="Order Now"
+        ctaLink="/contact"
       />
 
       <IntroStrip />

@@ -5,9 +5,11 @@ interface HeroSectionProps {
   backgroundImage: string;
   headline: string;
   subheadline: string;
-  ctaText: string;
-  ctaLink: string;
+  ctaText?: string;
+  ctaLink?: string;
 }
+
+const isExternal = (url: string) => /^https?:\/\//.test(url);
 
 export default function HeroSection({
   backgroundImage,
@@ -16,6 +18,11 @@ export default function HeroSection({
   ctaText,
   ctaLink,
 }: HeroSectionProps) {
+  const ctaClassName =
+    "inline-flex items-center justify-center px-9 py-3 rounded-md bg-fanclare-green text-white font-semibold text-base hover:opacity-90 transition-opacity";
+
+  const showCta = ctaText && ctaLink;
+
   return (
     <section className="relative w-full min-h-[560px] h-[80vh] flex items-center justify-center bg-fanclare-green overflow-hidden">
       {/* Background image — bg-fanclare-green shows if the file is missing */}
@@ -41,16 +48,26 @@ export default function HeroSection({
           {headline}
         </h1>
 
-        <p className="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto mb-10">
+        <p className={`text-lg sm:text-xl text-white/80 max-w-2xl mx-auto ${showCta ? "mb-10" : ""}`}>
           {subheadline}
         </p>
 
-        <Link
-          href={ctaLink}
-          className="inline-flex items-center justify-center px-9 py-3 rounded-md bg-fanclare-green text-white font-semibold text-base hover:opacity-90 transition-opacity"
-        >
-          {ctaText}
-        </Link>
+        {showCta && (
+          isExternal(ctaLink) ? (
+            <a
+              href={ctaLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={ctaClassName}
+            >
+              {ctaText}
+            </a>
+          ) : (
+            <Link href={ctaLink} className={ctaClassName}>
+              {ctaText}
+            </Link>
+          )
+        )}
       </div>
     </section>
   );

@@ -27,12 +27,12 @@ export default function StoreBanner({ isOpen }: StoreBannerProps) {
             Our online store is open!
           </p>
           <Link
-            href="https://app.barn2door.com/fanclarefarmsbeef/all"
+            href="/contact"
             target="_blank"
             rel="noopener noreferrer"
             className="shrink-0 inline-flex items-center justify-center px-8 py-3 rounded-md bg-white text-fanclare-green font-bold text-sm hover:opacity-90 transition-opacity"
           >
-            Shop Now
+            Order Now
           </Link>
         </div>
       </section>
@@ -66,6 +66,7 @@ export default function StoreBanner({ isOpen }: StoreBannerProps) {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Your email address"
+              suppressHydrationWarning
               className="w-full sm:flex-1 px-4 py-2.5 rounded-md border border-fanclare-green/30 bg-white text-stone-800 placeholder:text-stone-400 text-sm focus:outline-none focus:ring-2 focus:ring-fanclare-green/40"
             />
             <button

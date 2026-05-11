@@ -2,12 +2,22 @@ import Link from "next/link";
 
 const quickLinks = [
   { label: "Home", href: "/" },
-  { label: "About Us", href: "/about" },
-  { label: "Beef Shares", href: "/beef-shares" },
+  { label: "Our Story", href: "/our-story" },
   { label: "Products", href: "/products" },
-  { label: "How It Works", href: "/how-it-works" },
-  { label: "FAQ", href: "/faq" },
+  { label: "How to Order", href: "/how-to-order" },
+  { label: "Find Us", href: "/find-us" },
   { label: "Contact", href: "/contact" },
+];
+
+const socialLinks = [
+  {
+    label: "Facebook",
+    href: "https://www.facebook.com/fanclarebeef/",
+  },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/fanclare_farms_beef/",
+  },
 ];
 
 export default function Footer() {
@@ -51,22 +61,14 @@ export default function Footer() {
               Contact
             </h3>
             <ul className="space-y-2 text-sm text-white/70">
-              <li>123 Farm Road</li>
-              <li>Anytown, ST 00000</li>
+              <li>12581 Brittles Mill Rd</li>
+              <li>Wakefield, VA 23888</li>
               <li className="pt-1">
                 <a
-                  href="mailto:info@fanclarefarms.com"
+                  href="tel:+17577978198"
                   className="hover:text-fanclare-tan transition-colors"
                 >
-                  info@fanclarefarms.com
-                </a>
-              </li>
-              <li>
-                <a
-                  href="tel:+15550000000"
-                  className="hover:text-fanclare-tan transition-colors"
-                >
-                  (555) 000-0000
+                  (757) 797-8198
                 </a>
               </li>
             </ul>
@@ -78,14 +80,12 @@ export default function Footer() {
               Follow Us
             </h3>
             <div className="flex flex-col gap-2">
-              {[
-                { label: "Facebook", href: "#" },
-                { label: "Instagram", href: "#" },
-                { label: "X / Twitter", href: "#" },
-              ].map((s) => (
+              {socialLinks.map((s) => (
                 <a
                   key={s.label}
                   href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-white/70 hover:text-fanclare-tan text-sm transition-colors"
                 >
                   {s.label}
