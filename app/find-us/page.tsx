@@ -252,7 +252,7 @@ export default function FindUsPage() {
   return (
     <>
       <HeroSection
-        backgroundImage="/images/hero-placeholder.jpg"
+        backgroundImage="/images/beef-bus.jpg"
         imageAlt="The Fanclare Farms Beef Bus mobile market trailer parked at a Hampton Roads farmers market"
         headline="Find the Beef Bus Near You"
         subheadline="Catch Fanclare Farms Beef at markets and community events across Hampton Roads."

@@ -198,7 +198,7 @@ export default function HowToOrderPage() {
   return (
     <>
       <HeroSection
-        backgroundImage="/images/hero-placeholder.jpg"
+        backgroundImage="/images/cooked-steak.jpg"
         imageAlt="Fanclare Farms Beef display table at a Hampton Roads farmers market"
         headline="Ordering is Easy — Here's How It Works"
         subheadline="From choosing your cuts to picking up your order, we make farm-direct ordering simple."

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import HeroSection from "@/components/sections/HeroSection";
 
@@ -21,11 +22,14 @@ function HeritageSection() {
     <section className="bg-white">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
-          {/* Image placeholder */}
-          <div className="w-full aspect-[4/3] rounded-2xl bg-fanclare-tan border border-fanclare-green/15 flex items-center justify-center">
-            <span className="text-fanclare-green/20 text-lg sm:text-2xl font-black select-none tracking-tight">
-              FARM PHOTO
-            </span>
+          <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden">
+            <Image
+              src="/images/hay-field.jpg"
+              alt="Hay field and farmland at Fanclare Farms in Wakefield, Virginia"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
+            />
           </div>
 
           {/* Text */}
@@ -127,11 +131,14 @@ function BeefBusFeature() {
     <section className="bg-white">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
-          {/* Image placeholder */}
-          <div className="w-full aspect-[4/3] rounded-2xl bg-fanclare-tan border border-fanclare-green/15 flex items-center justify-center">
-            <span className="text-fanclare-green/20 text-lg sm:text-2xl font-black select-none tracking-tight">
-              BEEF BUS PHOTO
-            </span>
+          <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden">
+            <Image
+              src="/images/beef-bus.jpg"
+              alt="The Fanclare Farms Beef Bus mobile market trailer at a Hampton Roads farmers market"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
+            />
           </div>
 
           {/* Text */}
@@ -185,7 +192,7 @@ export default function OurStoryPage() {
   return (
     <>
       <HeroSection
-        backgroundImage="/images/hero-placeholder.jpg"
+        backgroundImage="/images/hay-field.jpg"
         imageAlt="The Jones family farm in Wakefield, Virginia — five generations of farming land at Fanclare Farms"
         headline="Five Generations. One Farm. One Purpose."
         subheadline="Rooted in Wakefield, Virginia and raised for families who want to know where their food comes from."

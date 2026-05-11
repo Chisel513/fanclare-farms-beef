@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function StoryTeaser() {
@@ -6,11 +7,14 @@ export default function StoryTeaser() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
 
-          {/* Image placeholder */}
-          <div className="w-full aspect-[4/3] rounded-2xl bg-fanclare-green/10 border border-fanclare-green/15 flex items-center justify-center">
-            <span className="text-fanclare-green/25 text-xl sm:text-3xl font-black select-none tracking-tight">
-              FARM PHOTO
-            </span>
+          <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden">
+            <Image
+              src="/images/cattle-herd.jpg"
+              alt="Black Angus cattle grazing on open pasture at Fanclare Farms in Wakefield, Virginia"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
+            />
           </div>
 
           {/* Text content */}
