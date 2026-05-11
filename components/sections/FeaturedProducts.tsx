@@ -30,8 +30,8 @@ const products: Product[] = [
     description:
       "Stock your freezer with a curated selection of our best cuts.",
     slug: "beef-share-quarter",
-    src: "/images/FC_Cows_On_Pasture 1.jpg",
-    alt: "Black Angus cattle on pasture at Fanclare Farms — order a beef share today",
+    src: "/images/FC_Freezer 1.jpg",
+    alt: "Fanclare Farms beef stocked in the freezer — order a beef share today",
   },
   {
     name: "Berkshire Pork",

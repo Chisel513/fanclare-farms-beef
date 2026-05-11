@@ -66,64 +66,65 @@ const beefCuts: ProductCard[] = [
   {
     name: "Ground Beef",
     description:
-      "Our most versatile cut. Perfect for burgers, chili, meatballs, and everyday meals.",
+      "Freshly ground from our Black Angus cattle. Versatile, flavorful, and perfect for burgers, meatballs, tacos, and more. Ground in small batches for the freshest taste.",
     src: "/images/FC_Ground_Beef 1.jpg",
-    alt: "Fanclare Farms grass-fed Black Angus ground beef",
+    alt: "Fanclare Farms fresh ground beef",
   },
   {
     name: "Ribeye Steak",
     description:
-      "Rich, well-marbled and full of flavor. Our most popular premium cut.",
+      "Rich marbling and bold flavor make our ribeye a steakhouse favorite. Cut thick from well-finished Black Angus cattle raised on our Virginia pastures.",
     src: "/images/FC_RibEye 1.jpg",
-    alt: "Fanclare Farms Black Angus ribeye steak — well-marbled and full of flavor",
+    alt: "Fanclare Farms ribeye steak",
   },
   {
     name: "T-Bone Steak",
     description:
-      "The best of both worlds — NY strip on one side, tenderloin on the other.",
+      "The best of both worlds — tender strip on one side, rich tenderloin on the other. Our T-bones are cut generously and deliver big on flavor.",
     src: "/images/FC_Tbone 1.jpg",
-    alt: "Fanclare Farms Black Angus T-bone steak",
+    alt: "Fanclare Farms T-bone steak",
   },
   {
-    name: "Brisket",
+    name: "Beef Brisket",
     description:
-      "Slow-smoked or oven-roasted — fall-apart tender every time.",
+      "Slow-smoked or oven-braised, our brisket is a showstopper. Full of natural flavor from pasture-raised cattle — perfect for backyard BBQs and family gatherings.",
     src: "/images/FC_Beef_Brisket 1.jpg",
-    alt: "Fanclare Farms Black Angus beef brisket",
+    alt: "Fanclare Farms beef brisket",
   },
   {
     name: "Beef Back Ribs",
-    description: "Meaty, flavorful, and made for the grill.",
+    description:
+      "Meaty, smoky, and satisfying. Our beef back ribs come from well-finished Black Angus cattle and reward low-and-slow cooking with incredible depth of flavor.",
     src: "/images/FC_Beef_Back_Ribs 1.jpg",
-    alt: "Fanclare Farms Black Angus beef back ribs",
+    alt: "Fanclare Farms beef back ribs",
   },
   {
     name: "Kabob Cuts",
     description:
-      "Perfectly cubed and ready for the skewer. Great for grilling season.",
+      "Pre-cut and ready to skewer. Our kabob cuts are tender, bite-sized pieces of beef that marinate beautifully and grill up juicy every time.",
     src: "/images/FC_Kebob 1.jpg",
-    alt: "Fanclare Farms Black Angus kabob cuts — cubed and ready to grill",
+    alt: "Fanclare Farms kabob cuts",
   },
   {
     name: "Beef Patties",
     description:
-      "Hand-formed from our own ground beef. Fire up the grill.",
+      "Hand-formed from our fresh ground beef. These patties are the real deal — no fillers, no additives. Fire up the grill and taste the difference.",
     src: "/images/FC_Beef_Patties 1.jpg",
-    alt: "Fanclare Farms hand-formed Black Angus beef burger patties",
+    alt: "Fanclare Farms beef patties",
   },
   {
     name: "Beef Bacon",
     description:
-      "A unique Fanclare specialty — all the smoky flavor of bacon, made from beef.",
+      "A Fanclare specialty — thick-cut beef bacon from our Black Angus cattle. All the smoky, savory satisfaction of traditional bacon with a rich beefy twist.",
     src: "/images/FC_Beef_Bacon 1.jpg",
-    alt: "Fanclare Farms beef bacon — a unique farm specialty",
+    alt: "Fanclare Farms beef bacon",
   },
   {
     name: "Rendered Beef Fat",
     description:
-      "Old-fashioned cooking fat rendered from our own cattle. Rich flavor for any dish.",
+      "Pure, clean beef tallow rendered from our pasture-raised cattle. Use it for high-heat cooking, frying, or as a rich, flavorful substitute for butter or oil.",
     src: "/images/FC_Rendered_Beef_Fat 1.jpg",
-    alt: "Fanclare Farms rendered beef fat — traditional cooking fat from Black Angus cattle",
+    alt: "Fanclare Farms rendered beef fat tallow",
   },
 ];
 
@@ -251,30 +252,30 @@ const porkCuts: ProductCard[] = [
   {
     name: "Pork Chops",
     description:
-      "Thick-cut pasture-raised Berkshire pork chops. Tender and full of flavor.",
+      "Center-cut and thick, our pork chops are full of the natural flavor you get from pasture-raised hogs. Pan-sear, grill, or bake — they're a weeknight dinner winner.",
     src: "/images/FC_Pork_Chops 1.jpg",
-    alt: "Fanclare Farms pasture-raised Berkshire pork chops",
+    alt: "Fanclare Farms pork chops",
   },
   {
     name: "Pork Spare Ribs",
     description:
-      "Fall-off-the-bone Berkshire spare ribs. Perfect for low and slow.",
+      "Fall-off-the-bone tender with a rich, porky depth. Our spare ribs come from naturally raised hogs and reward a slow cook with incredible flavor.",
     src: "/images/Fc_Pork_Spare_Ribs 1.jpg",
-    alt: "Fanclare Farms Berkshire pork spare ribs",
+    alt: "Fanclare Farms pork spare ribs",
   },
   {
     name: "Smoked Pork Side",
     description:
-      "Slow-smoked heritage pork, sliced and ready for any meal.",
+      "Slow-smoked pork side, sliced and ready to enjoy. Rich, savory, and packed with smoky flavor — great on its own or added to your favorite dishes.",
     src: "/images/FC_Smoked_Pork_Side_Sliced 1.jpg",
-    alt: "Fanclare Farms smoked Berkshire pork side, sliced",
+    alt: "Fanclare Farms smoked pork side sliced",
   },
   {
     name: "Bulk Pork Sausage",
     description:
-      "Mild bulk sausage made from our pasture-raised Berkshire pork.",
+      "Our mild bulk pork sausage is made from quality cuts with a classic seasoning blend. Perfect for breakfast patties, pasta sauces, or any recipe calling for ground sausage.",
     src: "/images/FC_Mild_Pork_Bulk_Sausage 1.jpg",
-    alt: "Fanclare Farms mild bulk pork sausage from Berkshire pork",
+    alt: "Fanclare Farms mild bulk pork sausage",
   },
 ];
 

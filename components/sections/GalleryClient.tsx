@@ -95,14 +95,16 @@ const galleryItems: GalleryItem[] = [
   {
     id: 10,
     category: "Products & Cuts",
-    label: "Fresh Beef",
-    // Photo coming soon
+    label: "Beef Products",
+    src: "/images/FC_Products_cuts 1.jpg",
+    alt: "Fanclare Farms Black Angus beef products and cuts",
   },
   {
     id: 11,
     category: "Products & Cuts",
-    label: "Vacuum-Packed Cuts",
-    // Photo coming soon
+    label: "Fresh Cuts",
+    src: "/images/FC_Products_cuts 2.jpg",
+    alt: "Assorted fresh beef cuts from Fanclare Farms in Wakefield, Virginia",
   },
   // Market Days
   {
@@ -151,14 +153,16 @@ const galleryItems: GalleryItem[] = [
   {
     id: 18,
     category: "Cooked & Plated",
-    label: "Grilled Ribeye",
-    // Photo coming soon
+    label: "Farm to Table",
+    src: "/images/Fc_Cooked_Plated 1.jpg",
+    alt: "Fanclare Farms beef cooked and plated — farm to table",
   },
   {
     id: 19,
     category: "Cooked & Plated",
-    label: "Family Dinner",
-    // Photo coming soon
+    label: "Plated Beef",
+    src: "/images/FC_Cooked_plated 2.jpg",
+    alt: "Fanclare Farms pasture-raised beef served fresh",
   },
 ];
 
