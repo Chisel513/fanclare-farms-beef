@@ -3,9 +3,15 @@ import { Phone, Mail, MapPin } from "lucide-react";
 import ContactForm from "@/components/sections/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Contact Us",
   description:
-    "Get in touch with Fanclare Farms Beef. Call, text, or send a message to place an order, ask about beef shares, or find out where the Beef Bus will be.",
+    "Get in touch with Fanclare Farms Beef. Call or text (757) 797-8198, email fanclarebeef@gmail.com, or send us a message online.",
+  openGraph: {
+    title: "Contact Us | Fanclare Farms Beef",
+    description:
+      "Get in touch with Fanclare Farms Beef. Call or text (757) 797-8198, email fanclarebeef@gmail.com, or send us a message online.",
+    images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }],
+  },
 };
 
 // ── Custom hero ───────────────────────────────────────────────────────────────

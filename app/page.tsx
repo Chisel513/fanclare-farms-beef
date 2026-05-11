@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import HeroSection from "@/components/sections/HeroSection";
 import IntroStrip from "@/components/sections/IntroStrip";
 import StoreBanner from "@/components/sections/StoreBanner";
@@ -5,6 +6,18 @@ import FeaturedProducts from "@/components/sections/FeaturedProducts";
 import StoryTeaser from "@/components/sections/StoryTeaser";
 import TestimonialQuote from "@/components/sections/TestimonialQuote";
 import MarketsStrip from "@/components/sections/MarketsStrip";
+
+export const metadata: Metadata = {
+  title: "Fanclare Farms Beef | 5th Generation Family Farm in Wakefield, VA",
+  description:
+    "Grass-fed, grain-finished Black Angus beef and pasture-raised Berkshire pork from a 5th generation family farm in Wakefield, Virginia. Know Better. Eat Better.",
+  openGraph: {
+    title: "Fanclare Farms Beef | 5th Generation Family Farm in Wakefield, VA",
+    description:
+      "Grass-fed, grain-finished Black Angus beef and pasture-raised Berkshire pork from a 5th generation family farm in Wakefield, Virginia. Know Better. Eat Better.",
+    images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }],
+  },
+};
 
 export default function HomePage() {
   return (

@@ -5,7 +5,13 @@ import HeroSection from "@/components/sections/HeroSection";
 export const metadata: Metadata = {
   title: "Our Story",
   description:
-    "Five generations of the Jones family farming in Wakefield, Virginia. Learn about Fanclare Farms Beef — grass-fed, grain-finished Black Angus raised with purpose.",
+    "Five generations of farming in Wakefield, Virginia. Learn about the Jones family, our 500+ acre farm, and our commitment to quality beef and pork.",
+  openGraph: {
+    title: "Our Story | Fanclare Farms Beef",
+    description:
+      "Five generations of farming in Wakefield, Virginia. Learn about the Jones family, our 500+ acre farm, and our commitment to quality beef and pork.",
+    images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }],
+  },
 };
 
 // ── Heritage Section ──────────────────────────────────────────────────────────

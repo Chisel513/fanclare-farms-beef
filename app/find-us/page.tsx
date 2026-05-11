@@ -5,7 +5,13 @@ import HeroSection from "@/components/sections/HeroSection";
 export const metadata: Metadata = {
   title: "Find Us",
   description:
-    "Find Fanclare Farms Beef at farmers markets across Hampton Roads — Suffolk, Norfolk, and Chesapeake — or visit the farm in Wakefield, Virginia.",
+    "Find the Beef Bus at farmers markets in Suffolk, Norfolk, and Chesapeake, VA. Visit our farm at 12581 Brittles Mill Rd, Wakefield, VA 23888.",
+  openGraph: {
+    title: "Find Us | Fanclare Farms Beef",
+    description:
+      "Find the Beef Bus at farmers markets in Suffolk, Norfolk, and Chesapeake, VA. Visit our farm at 12581 Brittles Mill Rd, Wakefield, VA 23888.",
+    images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }],
+  },
 };
 
 // ── Market Cards ──────────────────────────────────────────────────────────────

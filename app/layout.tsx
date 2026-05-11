@@ -12,18 +12,37 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://fanclarebeef.com"),
   title: {
-    default: "Fanclare Farms Beef",
+    default: "Fanclare Farms Beef | 5th Generation Family Farm in Wakefield, VA",
     template: "%s | Fanclare Farms Beef",
   },
   description:
-    "Premium grass-fed, pasture-raised beef from Fanclare Farms. Order beef shares and cuts direct from our family farm.",
-  keywords: ["grass-fed beef", "beef shares", "farm-to-table", "Fanclare Farms", "pasture-raised"],
+    "Grass-fed, grain-finished Black Angus beef and pasture-raised Berkshire pork from a 5th generation family farm in Wakefield, Virginia. Know Better. Eat Better.",
+  keywords: [
+    "grass-fed beef",
+    "beef shares",
+    "Black Angus beef",
+    "Berkshire pork",
+    "farm-to-table",
+    "Fanclare Farms",
+    "Wakefield VA",
+    "Hampton Roads",
+  ],
   openGraph: {
-    title: "Fanclare Farms Beef",
+    siteName: "Fanclare Farms Beef",
+    title: "Fanclare Farms Beef | 5th Generation Family Farm in Wakefield, VA",
     description:
-      "Premium grass-fed, pasture-raised beef from Fanclare Farms. Order beef shares and cuts direct from our family farm.",
+      "Grass-fed, grain-finished Black Angus beef and pasture-raised Berkshire pork from a 5th generation family farm in Wakefield, Virginia.",
     type: "website",
+    images: [
+      {
+        url: "/images/og-default.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Fanclare Farms Beef — 5th Generation Family Farm in Wakefield, VA",
+      },
+    ],
   },
 };
 

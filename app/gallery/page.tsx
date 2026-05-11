@@ -4,7 +4,13 @@ import GalleryClient from "@/components/sections/GalleryClient";
 export const metadata: Metadata = {
   title: "Gallery",
   description:
-    "Photos from Fanclare Farms Beef — our cattle, our cuts, market days across Hampton Roads, and farm life in Wakefield, Virginia.",
+    "Photos from Fanclare Farms Beef — our cattle, farm life, premium cuts, and farmers market appearances across Hampton Roads, Virginia.",
+  openGraph: {
+    title: "Gallery | Fanclare Farms Beef",
+    description:
+      "Photos from Fanclare Farms Beef — our cattle, farm life, premium cuts, and farmers market appearances across Hampton Roads, Virginia.",
+    images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }],
+  },
 };
 
 // ── Custom hero (plain bg-fanclare-green, no background image) ─────────────

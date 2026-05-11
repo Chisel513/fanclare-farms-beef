@@ -7,7 +7,13 @@ import HeroSection from "@/components/sections/HeroSection";
 export const metadata: Metadata = {
   title: "Our Products",
   description:
-    "Grass-fed, grain-finished Black Angus beef and pasture-raised Berkshire pork raised on 500+ acres in Wakefield, Virginia. Order beef shares and individual cuts direct from the farm.",
+    "Shop grass-fed Black Angus beef cuts, beef shares, and Berkshire pork from Fanclare Farms Beef in Wakefield, VA. USDA inspected and vacuum-packed.",
+  openGraph: {
+    title: "Our Products | Fanclare Farms Beef",
+    description:
+      "Shop grass-fed Black Angus beef cuts, beef shares, and Berkshire pork from Fanclare Farms Beef in Wakefield, VA. USDA inspected and vacuum-packed.",
+    images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }],
+  },
 };
 
 // ── Types ─────────────────────────────────────────────────────────────────────

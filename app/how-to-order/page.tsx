@@ -6,7 +6,13 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 export const metadata: Metadata = {
   title: "How to Order",
   description:
-    "Learn how to order farm-direct beef and pork from Fanclare Farms. Browse cuts, reach out, and pick up at the farm or a local farmers market in Hampton Roads.",
+    "Learn how to order farm-direct beef and pork from Fanclare Farms Beef. Individual cuts, beef shares, and pork shares available. Call (757) 797-8198.",
+  openGraph: {
+    title: "How to Order | Fanclare Farms Beef",
+    description:
+      "Learn how to order farm-direct beef and pork from Fanclare Farms Beef. Individual cuts, beef shares, and pork shares available. Call (757) 797-8198.",
+    images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }],
+  },
 };
 
 // ── Step Process ──────────────────────────────────────────────────────────────
