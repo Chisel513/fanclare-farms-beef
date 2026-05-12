@@ -96,14 +96,14 @@ const galleryItems: GalleryItem[] = [
     id: 10,
     category: "Products & Cuts",
     label: "Beef Products",
-    src: "/images/FC_Products_cuts 1.jpg",
+    src: "/images/FC_Beef_Products 1.jpg",
     alt: "Fanclare Farms Black Angus beef products and cuts",
   },
   {
     id: 11,
     category: "Products & Cuts",
     label: "Fresh Cuts",
-    src: "/images/FC_Products_cuts 2.jpg",
+    src: "/images/FC_Fresh_Cuts 1.jpg",
     alt: "Assorted fresh beef cuts from Fanclare Farms in Wakefield, Virginia",
   },
   // Market Days
